@@ -98,17 +98,17 @@ https://user-images.githubusercontent.com/98050969/174826909-ce090684-f7d1-47b6-
 - I have also understood how threads work as well as the concept of multi-threading and mutex locks which have been implemented through POSIX threads in the chat server.
 
 ## Additional Tasks
-
-- From the basic socket programming model using multi-threading, the implementation of a real time chat server has been done.
  
-- Threads have been used for sending and recieving messages
+- I have used Threads for sending and recieving messages.
+
+- From the basics of socket programming model using multi-threading, the implementation of a real time chat server has been done.
 
 - Mutex/locks have been used while adding and removing any client from the
   list of active users.
+  
+- Use of a keyword ("exit") to remove a client from the server.
 
 - The joining and leaving of clients is color coded.
-
-- Use of a keyword ("exit") to remove a client from the server.
 
 ## References
 

@@ -12,15 +12,27 @@ The Chat Room Server works on Linux based Operating System.
 Since we have implemented the Chat Room server in CPlusPlus language and hence the installation of
 g++ becomes a prerequisite. 
 In order to install gcc compiler -
-  On windows - run command 
+On windows - run the following command-
 
-In order to deploy the chat server, first compile the server.cpp and 
+```bash
+  sudo apt install gcc
+```
+On mac if you have homebrew preinstalled then run the following command -
+
+```bash
+  brew install gcc
+```
+and in this way we can insatll gcc on our system.
+
+Now, In order to deploy the Chat Room Server, first we have to compile the server.cpp and 
 client.cpp files by commands:
 
 ```bash
-  g++ -pthread -o server server.cpp
-  g++ -pthread -o client client.cpp
+  g++ -lpthread -o server server.cpp
+  g++ -lpthread -o client client.cpp
 ```
+This will create two executable object files for server.cpp and client.cpp which are named (server and client respectively).
+
 After compiling the files, run the server by the command:
 ```bash
 ./server

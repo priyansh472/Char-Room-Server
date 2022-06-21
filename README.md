@@ -12,6 +12,7 @@ The Chat Room Server works on Linux based Operating System.
 Since we have implemented the Chat Room server in CPlusPlus language and hence the installation of
 g++ becomes a prerequisite. 
 In order to install gcc compiler -
+
 On windows - run the following command-
 
 ```bash
@@ -22,7 +23,7 @@ On mac if you have homebrew preinstalled then run the following command -
 ```bash
   brew install gcc
 ```
-and in this way we can insatll gcc on our system.
+And in this way we can insatll gcc on our system.
 
 Now, In order to deploy the Chat Room Server, first we have to compile the server.cpp and 
 client.cpp files by commands:
@@ -33,18 +34,20 @@ client.cpp files by commands:
 ```
 This will create two executable object files for server.cpp and client.cpp which are named (server and client respectively).
 
-After compiling the files, run the server by the command:
+After compiling the files, we run the server by the executing the executable file 'server' by the following command:
+
 ```bash
 ./server
 ```
 
-After that, clients can join the server by:
+After that, clients can join the server by executing the following command:
+
 ```bash
 ./client
 ```
 
 
-## Internal Working
+## Internal Working 
 
 The chat server conists of the server side and the client side which are connected to each other
 through sockets. The port to which both the server and client sockets connect has been pre-set to 10000.  
@@ -52,21 +55,15 @@ through sockets. The port to which both the server and client sockets connect ha
 
 ### Server
 
-The server side is designed to control how a client interacts with server
-as well as with the other clients. For that, primarily we need functions
-to add as well as remove clients from the queue. Since multi threading is
-used in the server, hence it is essential to use mutex locks while adding
-and removing clients from the list. A broadcast_message function has been used, which sends the message of a 
-client to all other clients and the server. 
-
-On runnning the server, intially the socket is created and after 
-the bind socket and listen functions are executed the server is opened for client
-processes to join. When any client attempts to join the server a new thread is
-created and the client is added to the queue of active users.
-Further, when a valid name is entered, the client becomes eligible to interact in the 
-chat room. Then, all the messages of the client are sent with the broadcast_message
-function to other clients and the server until the client sends the message exit.
-On doing so, the client is removed from the server.
+- The server side is designed to control how a client interacts with server as well as with the other clients.
+- For that, primarily we need functionsto add as well as remove clients from the queue. 
+- Since multi threading is used in the server, hence it is essential to use mutex locks while adding and removing clients from the list. 
+- A broadcast_message function has been used, which sends the message of a client to all other clients and the server. 
+- On runnning the server, intially the socket is created and after the bind socket and listen functions are executed the server is opened for client processes to join. 
+- When any client attempts to join the server a new thread is created and the client is added to the queue of active users.
+- Further, when a valid name is entered, the client becomes eligible to interact in the chat room. 
+- Then, all the messages of the client are sent with the broadcast_message function to other clients and the server until the client sends the message exit.
+- On doing so, the client is removed from the server.
 
 ### Client
 
@@ -93,7 +90,8 @@ In the course of this project, I have learned the working of sockets
 and connecting as well as sending data between different sockets. 
 I have also understood how threads work as well as the concept of
 multi-threading and mutex locks which have been implemented
-through POSIX threads in the chat server. 
+through POSIX threads in the chat server.
+
 ## Additional Tasks
 
 - From the basic socket programming model using multi-threading, the implementation of a real time chat server has been done.
@@ -106,6 +104,7 @@ through POSIX threads in the chat server.
 - The joining and leaving of clients is color coded.
 
 - Use of a keyword ("exit") to remove a client from the server.
+
 ## References
 
 - https://www.geeksforgeeks.org/socket-programming-cc/

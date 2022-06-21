@@ -103,8 +103,7 @@ through sockets. The port to which both the server sockets and client sockets co
 
 - From the basics of socket programming model using multi-threading, the implementation of a real time chat server has been done.
 
-- Mutex/locks have been used while adding and removing any client from the
-  list of active users.
+- The concept of Mutex/locks have been used while adding and removing any client from the list of active users , basically this addition and removal is done from the chat room for proper synchronization.
   
 - Use of a keyword ("exit") to remove a client from the server.
 

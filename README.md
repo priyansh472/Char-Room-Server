@@ -105,7 +105,7 @@ through sockets. The port to which both the server sockets and client sockets co
 
 - The concept of Mutex/locks have been used while adding and removing any client from the list of active users , basically this addition and removal is done from the chat room for proper synchronization.
   
-- Use of a keyword ("exit") to remove a client from the server.
+- Use of a keyword ("#exit") to remove a client from the server.
 
 - The joining and leaving of clients is color coded.
 

@@ -67,18 +67,13 @@ through sockets. The port to which both the server and client sockets connect ha
 
 ### Client
 
-The client side primarily controls the sending and recieving of the messages. 
-It consists of two functions handler_send and handler_recieve. 
-
-When the server is active, on running the client and entering a valid name, 
-the socket is created. After connecting to the socket, the name is sent to the
-server and the client is ready to interact with the server and all other clients as well as
-the server recieve a message that the client has joined the chat room. Whenever a message 
-is sent by any other client, the name of the sending client along with the message
-is diplayed on the client's terminal. If the client writes a message and unless
-the message is not "exit" the message is broadcasted to all the users. On writing
-exit, the client is removed from the server and all the other clients and the server
-recieve a message forthe same.
+- The client side primarily controls the sending and recieving of the messages.
+- It consists of two functions handler_send and handler_recieve. 
+- When the server is active, on running the client and entering a valid name, the socket is created. 
+- After connecting to the socket, the name is sent to the server and the client is ready to interact with the server and all other clients as well as the server recieve a message that the client has joined the chat room.
+- Whenever a message is sent by any other client, the name of the sending client along with the message is diplayed on the client's terminal. 
+- If the client writes a message and unless the message is not "exit" the message is broadcasted to all the users. 
+- On writing exit, the client is removed from the server and all the other clients and the server recieve a message for the same.
 
 ## Video Demo
 
@@ -86,11 +81,8 @@ https://user-images.githubusercontent.com/98050969/174826909-ce090684-f7d1-47b6-
 
 ## Learnings
 
-In the course of this project, I have learned the working of sockets
-and connecting as well as sending data between different sockets. 
-I have also understood how threads work as well as the concept of
-multi-threading and mutex locks which have been implemented
-through POSIX threads in the chat server.
+- In the course of this project, I have learned the working of sockets and connecting as well as sending data between different sockets. 
+- I have also understood how threads work as well as the concept of multi-threading and mutex locks which have been implemented through POSIX threads in the chat server.
 
 ## Additional Tasks
 

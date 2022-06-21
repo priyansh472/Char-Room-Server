@@ -49,19 +49,17 @@ After that, clients can join the server by executing the following command:
 
 ## Internal Working 
 
-The chat server conists of the server side and the client side which are connected to each other
-through sockets. The port to which both the server and client sockets connect has been pre-set to 10000.  
+The chat server conists of the server side and the client side which can consist of multiple clients which are connected to each other
+through sockets. The port to which both the server sockets and client sockets connect has been pre-set to 10000.  
 
 
 ### Server
 
-- The server side is designed to control how a client interacts with server as well as with the other clients.
+- The server side is designed to control how a client interacts with server as well as with the other clients. For that, primarily we need functions in order to add as well as remove the clients from the queue as we can have multiple clients. 
 
-- For that, primarily we need functionsto add as well as remove clients from the queue. 
+- I have used a broadcast_message function , whos function is to send the message of a client to all other clients and the server. 
 
-- Since multi threading is used in the server, hence it is essential to use mutex locks while adding and removing clients from the list. 
-
-- A broadcast_message function has been used, which sends the message of a client to all other clients and the server. 
+- Since we have used multi threading in the server, hence it became necessary to use mutex locks during the addition and removal of the clients from the list. 
 
 - On runnning the server, intially the socket is created and after the bind socket and listen functions are executed the server is opened for client processes to join. 
 

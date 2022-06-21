@@ -1,17 +1,20 @@
 
-# Chat Server
+# Chat Room Server
 
-The implementation of a chat server written in CPP, using
-sockets and multi-threading, which works on Linux based OS.
+The implementation of the Chat Room Server is written in CPlusPlus language.
+The implementaion is done using sockets and multi-threading.
+The Chat Room Server works on Linux based Operating System.
 
 
 
-## Deployment
+## Deployment of the Server
 
-Since the chat server is written in cpp; therefore installation of
-g++ is a prerequisite. 
+Since we have implemented the Chat Room server in CPlusPlus language and hence the installation of
+g++ becomes a prerequisite. 
+In order to install gcc compiler -
+  On windows - run command 
 
-To deploy the chat server, first compile the server.cpp and 
+In order to deploy the chat server, first compile the server.cpp and 
 client.cpp files by commands:
 
 ```bash
